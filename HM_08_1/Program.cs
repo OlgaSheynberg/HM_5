@@ -49,17 +49,39 @@ void PrintArray(int[,] array)
     }
 }
 
-void MinMaxRows(int[,] array, int m, int n){
-    for (int i = 0; i < m; ++i){
-        int max=array[i,0];
-    for (int j = 0; j < n; ++j){
-            if (array[i, j] < max){
+void MinMaxRows(int[,] array, int m, int n) //Упорядоченно  от меньшего к большему
+{
+    for (int i = 0; i < m; ++i)
+    {
+        int max = array[i, 0];
+        for (int j = 0; j < n; ++j)
+        {
+            if (array[i, j] < max)
+            {
                 int temp = array[i, j];
                 array[i, j] = array[i, j - 1];
                 array[i, j - 1] = temp;
             }
-          max = array[i, j];
-        } 
+            max = array[i, j];
+        }
+    }
+}
+
+void MinMaxRows1(int[,] array, int m, int n)  //Упорядоченно от большего к меньшему
+{
+    for (int i = 0; i < m; ++i)
+    {
+        int max = array[i, 0];
+        for (int j = 0; j < n; ++j)
+        {
+            if (array[i, j] > max)
+            {
+                int temp = array[i, j];
+                array[i, j] = array[i, j - 1];
+                array[i, j - 1] = temp;
+            }
+            max = array[i, j];
+        }
     }
 }
 
@@ -67,9 +89,11 @@ int[,] arr = new int[m, n];
 arr = RandomArray(m, n, minValue, maxValue);
 Console.WriteLine("Двумерный массив:");
 PrintArray(arr);
+
 Console.WriteLine("Упорядоченный массив: ");
-while(n>=0){
-    MinMaxRows(arr, m, n);
+while (n >= 0)
+{
+    MinMaxRows1(arr, m, n);
     n--;
 }
 PrintArray(arr);
