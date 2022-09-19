@@ -107,38 +107,3 @@ array = RandomArray(m, n, l, minValue, maxValue);
 Console.WriteLine("Массив из неповторяющихся чисел:");
 PrintArray(array);
 Console.WriteLine();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* for(int j=0;j<repeat.Length;++j)
-{
- for(int i=1;i<array.Length;++i)
-{
-    while (repeat[j]==array[i])
-    {
-    repeat[j]=new Random().Next(minValue,maxValue);
-    }
-}  
-Console.Write(repeat[j]+" "+j);
-} */
-
-
