@@ -1,21 +1,14 @@
 ﻿Console.Clear();
 Console.WriteLine("Задача 62. Напишите программу, которая заполнит спирально массив 4 на 4.");
 
-Console.Write("Введите размерстороны массива: ");
+Console.Write("Введите размер стороны массива: ");
 int n = int.Parse(Console.ReadLine());
 
 while (n < 0)
 {
-    Console.WriteLine("Введите количетво стобцов массива");
-    n = int.Parse(Console.ReadLine());
+    Console.WriteLine("Введите положительное число");
+    n = int.Parse(Console.Reine());
 }
-/* Console.Write("Введите высоту массива: ");
-int n = int.Parse(Console.ReadLine());
-while (n < 0)
-{
-    Console.WriteLine(" введите положительное число");
-    n = int.Parse(Console.ReadLine());
-} */
 
 Console.Write("Введите минимальное значение массива: ");
 int minValue = int.Parse(Console.ReadLine());
