@@ -24,7 +24,6 @@ while (m > n)
     Console.WriteLine(" введите число N больше M");
     n = int.Parse(Console.ReadLine());
 }
-string NaturalNum = " ";
 
 void PrintNaturalNumber(int i, int j)
 {
